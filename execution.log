@@ -1,0 +1,54 @@
+nt.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o\nrm -f pipex.o executioner.o utils.o get_path.o manage_fd.o here_doc.o gnl.o error.o command_parser.o pipex.o executioner.o utils.o get_path.o manage_fd.o here_doc.o gnl.o error.o command_parser.o\nmake fclean -C ./libft/\nrm -f ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o\nrm -f libft.a\nrm -f pipex\ncc -Wall -Wextra -Werror -g -c pipex.c -o pipex.o\ncc -Wall -Wextra -Werror -g -c executioner.c -o executioner.o\ncc -Wall -Wextra -Werror -g -c utils.c -o utils.o\ncc -Wall -Wextra -Werror -g -c get_path.c -o get_path.o\ncc -Wall -Wextra -Werror -g -c manage_fd.c -o manage_fd.o\ncc -Wall -Wextra -Werror -g -c here_doc.c -o here_doc.o\ncc -Wall -Wextra -Werror -g -c gnl.c -o gnl.o\ncc -Wall -Wextra -Werror -g -c error.c -o error.o\ncc -Wall -Wextra -Werror -g -c command_parser.c -o command_parser.o\nmake all bonus -C ./libft/\ncc -Wall -Wextra -Werror   -c -o ft_atoi.o ft_atoi.c\ncc -Wall -Wextra -Werror   -c -o ft_bzero.o ft_bzero.c\ncc -Wall -Wextra -Werror   -c -o ft_calloc.o ft_calloc.c\ncc -Wall -Wextra -Werror   -c -o ft_isalnum.o ft_isalnum.c\ncc -Wall -Wextra -Werror   -c -o ft_isalpha.o ft_isalpha.c\ncc -Wall -Wextra -Werror   -c -o ft_isascii.o ft_isascii.c\ncc -Wall -Wextra -Werror   -c -o ft_isdigit.o ft_isdigit.c\ncc -Wall -Wextra -Werror   -c -o ft_isprint.o ft_isprint.c\ncc -Wall -Wextra -Werror   -c -o ft_itoa.o ft_itoa.c\ncc -Wall -Wextra -Werror   -c -o ft_memchr.o ft_memchr.c\ncc -Wall -Wextra -Werror   -c -o ft_memcmp.o ft_memcmp.c\ncc -Wall -Wextra -Werror   -c -o ft_memcpy.o ft_memcpy.c\ncc -Wall -Wextra -Werror   -c -o ft_memmove.o ft_memmove.c\ncc -Wall -Wextra -Werror   -c -o ft_memset.o ft_memset.c\ncc -Wall -Wextra -Werror   -c -o ft_putchar_fd.o ft_putchar_fd.c\ncc -Wall -Wextra -Werror   -c -o ft_putendl_fd.o ft_putendl_fd.c\ncc -Wall -Wextra -Werror   -c -o ft_putnbr_fd.o ft_putnbr_fd.c\ncc -Wall -Wextra -Werror   -c -o ft_putstr_fd.o ft_putstr_fd.c\ncc -Wall -Wextra -Werror   -c -o ft_split.o ft_split.c\ncc -Wall -Wextra -Werror   -c -o ft_strchr.o ft_strchr.c\ncc -Wall -Wextra -Werror   -c -o ft_strdup.o ft_strdup.c\ncc -Wall -Wextra -Werror   -c -o ft_striteri.o ft_striteri.c\ncc -Wall -Wextra -Werror   -c -o ft_strjoin.o ft_strjoin.c\ncc -Wall -Wextra -Werror   -c -o ft_strlcat.o ft_strlcat.c\ncc -Wall -Wextra -Werror   -c -o ft_strlcpy.o ft_strlcpy.c\ncc -Wall -Wextra -Werror   -c -o ft_strlen.o ft_strlen.c\ncc -Wall -Wextra -Werror   -c -o ft_strmapi.o ft_strmapi.c\ncc -Wall -Wextra -Werror   -c -o ft_strncmp.o ft_strncmp.c\ncc -Wall -Wextra -Werror   -c -o ft_strnstr.o ft_strnstr.c\ncc -Wall -Wextra -Werror   -c -o ft_strrchr.o ft_strrchr.c\ncc -Wall -Wextra -Werror   -c -o ft_strtrim.o ft_strtrim.c\ncc -Wall -Wextra -Werror   -c -o ft_substr.o ft_substr.c\ncc -Wall -Wextra -Werror   -c -o ft_tolower.o ft_tolower.c\ncc -Wall -Wextra -Werror   -c -o ft_toupper.o ft_toupper.c\nar rcs libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o\ncc -Wall -Wextra -Werror   -c -o ft_lstnew.o ft_lstnew.c\ncc -Wall -Wextra -Werror   -c -o ft_lstadd_front.o ft_lstadd_front.c\ncc -Wall -Wextra -Werror   -c -o ft_lstsize.o ft_lstsize.c\ncc -Wall -Wextra -Werror   -c -o ft_lstlast.o ft_lstlast.c\ncc -Wall -Wextra -Werror   -c -o ft_lstadd_back.o ft_lstadd_back.c\ncc -Wall -Wextra -Werror   -c -o ft_lstdelone.o ft_lstdelone.c\ncc -Wall -Wextra -Werror   -c -o ft_lstclear.o ft_lstclear.c\ncc -Wall -Wextra -Werror   -c -o ft_lstiter.o ft_lstiter.c\ncc -Wall -Wextra -Werror   -c -o ft_lstmap.o ft_lstmap.c\nar rcs libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o\ncc -Wall -Wextra -Werror pipex.o executioner.o utils.o get_path.o manage_fd.o here_doc.o gnl.o error.o command_parser.o libft/libft.a -o pipex\n', stderr='')
+ native:1 "< infile.txt cat | wc > outfile.txt", pipex: "./pipex infile.txt cat wc outfile.txt"
+ native:2 "< infile.txt cat | wc > inexistent.txt", pipex: "./pipex infile.txt cat wc inexistent.txt"
+native:3 "< infile.txt sed    "s/And/But/" | grep But > outfile.txt", pipex: "./pipex infile.txt 'sed    "s/And/But/"' 'grep But' outfile.txt"
+native:4 "< infile.txt sed "s/And/But/" | awk '{count++} END {print count}' > outfile.txt", pipex: "./pipex infile.txt 'sed "s/And/But/"' 'awk '"'"'{count++} END {print count}'"'"'' outfile.txt"
+native:5 "< infile.txt sed "s/And/But/" | awk "{count++} END {print count}" > outfile.txt", pipex: "./pipex infile.txt 'sed "s/And/But/"' 'awk "{count++} END {print count}"' outfile.txt"
+native:6 "< infile.txt sed "s/And/But/" | awk "{count++} END {printf \"count: %i\" , count}" > outfile.txt", pipex: "./pipex infile.txt 'sed "s/And/But/"' 'awk "{count++} END {printf \"count: %i\" , count}"' outfile.txt"
+native:7 "< infile.txt sed "s/And/But/" | awk '{count++} END {printf "count: %i", count}' > outfile.txt", pipex: "./pipex infile.txt 'sed "s/And/But/"' 'awk '"'"'{count++} END {printf "count: %i", count}'"'"'' outfile.txt"
+native:8 "< infile.txt ./script.sh | wc > outfile.txt", pipex: "./pipex infile.txt ./script.sh wc outfile.txt"
+native:10 "< infile.txt ./script\"quote.sh | wc > outfile.txt", pipex: "./pipex infile.txt './script\"quote.sh' wc outfile.txt"
+native:12 "< infile.txt /Users/isemin/francinette/tests/pipex/fsoares/script.sh | wc > outfile.txt", pipex: "./pipex infile.txt /Users/isemin/francinette/tests/pipex/fsoares/script.sh wc outfile.txt"
+native:13 "< no_in cat | wc > outfile.txt", pipex: "./pipex no_in cat wc outfile.txt"
+native:14 "< infile.txt non_existent_comm | wc > outfile.txt", pipex: "./pipex infile.txt non_existent_comm wc outfile.txt"
+native:15 "< infile.txt cat | non_existent_comm > outfile.txt", pipex: "./pipex infile.txt cat non_existent_comm outfile.txt"
+native:16 "< no_r_perm cat | wc > outfile.txt", pipex: "./pipex no_r_perm cat wc outfile.txt"
+native:17 "< infile.txt cat | wc > no_w_perm", pipex: "./pipex infile.txt cat wc no_w_perm"
+native:18 "< infile.txt ./no_x_script.sh | wc > outfile.txt", pipex: "./pipex infile.txt ./no_x_script.sh wc outfile.txt"
+native:19 "< infile.txt cat | ./no_x_script.sh > outfile.txt", pipex: "./pipex infile.txt cat ./no_x_script.sh outfile.txt"
+native:20 "< infile.txt ./middle_fail.sh | wc > outfile.txt", pipex: "./pipex infile.txt ./middle_fail.sh wc outfile.txt"
+native:21 "< infile.txt cat | ./middle_fail.sh > outfile.txt", pipex: "./pipex infile.txt cat ./middle_fail.sh outfile.txt"
+native:22 "< infile.txt ./script.sh | ./script.sh > outfile.txt", pipex: "./pipex infile.txt ./script.sh ./script.sh outfile.txt"
+native:23 "< infile.txt cat | wc > outfile.txt", pipex: "./pipex infile.txt cat wc outfile.txt"
+native:24 "< infile.txt ./script.sh | ./script.sh > outfile.txt", pipex: "./pipex infile.txt ./script.sh ./script.sh outfile.txt"
+native:25 "< infile.txt cat | wc > outfile.txt", pipex: "./pipex infile.txt cat wc outfile.txt"
+native:26 "< infile.txt cat | script.sh > outfile.txt", pipex: "./pipex infile.txt cat script.sh outfile.txt"
+native:27 "< infile.txt cat | uname > outfile.txt", pipex: "./pipex infile.txt cat uname outfile.txt"
+native:28 "< infile.txt cat | uname > outfile.txt", pipex: "./pipex infile.txt cat uname outfile.txt"
+native:29 "< infile.txt cat | wc > outfile.txt", pipex: "./pipex infile.txt cat wc outfile.txt"
+native:30 "< infile.txt cat | wc > outfile.txt", pipex: "./pipex infile.txt cat wc outfile.txt"
+native:31 "< infile.txt subdir/script.sh | wc > outfile.txt", pipex: "./pipex infile.txt subdir/script.sh wc outfile.txt"
+native:32 "< infile.txt sleep 1 | sleep 3 > outfile.txt", pipex: "./pipex infile.txt 'sleep 1' 'sleep 3' outfile.txt"
+native:33 "< infile.txt sleep 3 | sleep 1 > outfile.txt", pipex: "./pipex infile.txt 'sleep 3' 'sleep 1' outfile.txt"
+native:34 "< infile.txt sleep 3 | sleep 3 > outfile.txt", pipex: "./pipex infile.txt 'sleep 3' 'sleep 3' outfile.txt"
+2024-04-26 19:36:18,258 [base][ERROR]:
+Traceback (most recent call last):
+  File "/Users/isemin/francinette/testers/BaseTester.py", line 183, in test_using
+    return (tester.name, tx.execute())
+  File "/Users/isemin/francinette/testers/pipex/Fsoares.py", line 109, in execute
+    res_m += self.test_leak(False)
+  File "/Users/isemin/francinette/testers/pipex/Fsoares.py", line 146, in test_leak
+    output = has_leaks("./pipex infile.txt cat wc output.txt")
+  File "/Users/isemin/francinette/utils/LeaksCheck.py", line 55, in has_leaks
+    leaks = next(line for line in checker.stdout.splitlines() if leaks_regex.match(line))
+StopIteration
+2024-04-26 19:36:18,279 [base][WARNING]: norminette errors: ['command_parser.c', 'dup2test.c', 'error.c', 'executioner.c', 'get_path.c', 'here_doc.c', 'manage_fd.c', 'parse_Test.c', 'pipex.c', 'pipex.h', 'utils.c', 'which.c']
+2024-04-26 19:36:18,280 [base][WARNING]: missing functions: []
+2024-04-26 19:36:18,280 [base][WARNING]: errors in functions: [('pipex-tester', ['pipex-tester']), ('pipexMedic', []), ('fsoares', ['fsoares'])]
+
+		    TestCase(10, ['infile.txt', './script\\"quote.sh', 'wc', 'outfile.txt'],
+		             'The script is in the same folder, but has a name that contains an escaped quote'),
+		    TestCase(19, ['infile.txt', 'cat', './no_x_script.sh', 'outfile.txt'],
+		             "The second command does not have execution permission"),
+		    TestCase(26, ['infile.txt', 'cat', 'script.sh', 'outfile.txt'],
+		             "Should not match local script if it does not have a dot before the name")
