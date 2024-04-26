@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   here_doc.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/26 20:14:14 by isemin            #+#    #+#             */
+/*   Updated: 2024/04/26 20:15:20 by isemin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pipex.h"
 
 static char	**shift_argv(int argc, char **argv, char *new_infile)
 {
-	char **new_argv;
-	int i;
-	int	new_size;
+	char	**new_argv;
+	int		i;
+	int		new_size;
 
 	i = 2;
 	new_size = argc - 1;
@@ -51,9 +63,9 @@ static void	receive_input(int file_fd, char *limit)
 		temp_line = get_next_line(0, 0);
 		if (temp_line == NULL)
 			break ;
-		else if(ft_strncmp(temp_line, limit, ft_strlen(limit)) == 0 && 
-			ft_strlen(temp_line) == ft_strlen(limit) + 
-			(temp_line[ft_strlen(temp_line) - 1] == '\n'))
+		else if (ft_strncmp(temp_line, limit, ft_strlen(limit)) == 0 \
+				&& ft_strlen(temp_line) == ft_strlen(limit) + \
+				(temp_line[ft_strlen(temp_line) - 1] == '\n'))
 		{
 			free(temp_line);
 			break ;

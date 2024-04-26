@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:23:19 by isemin            #+#    #+#             */
-/*   Updated: 2024/01/28 16:14:24 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/26 20:13:56 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ char	*get_full_path(char *cmd, char **env_paths)
 	int		path_i;
 
 	path_i = 0;
-	if  (env_paths == NULL)
+	if (env_paths == NULL)
 		env_paths = get_path_arr("PATH=/bin:/sbin:/usr/bin:/usr/sbin");
 	if (env_paths != NULL)
 	{
-		while(env_paths[path_i] != NULL)
+		while (env_paths[path_i] != NULL)
 		{
 			full_path = ft_strjoin(env_paths[path_i], cmd);
 			if (full_path != NULL && access(full_path, F_OK) != -1)
@@ -51,7 +51,7 @@ char	*get_full_path(char *cmd, char **env_paths)
 		clear_arr(env_paths);
 	}
 	if (cmd != NULL && access(cmd, X_OK) != -1)
-		return(cmd);
+		return (cmd);
 	werror_exit(127, ft_strjoin(cmd, ": command not found"), 2);
 	return (NULL);
 }
@@ -59,8 +59,8 @@ char	*get_full_path(char *cmd, char **env_paths)
 
 char	**get_path(char **envp)
 {
-	int		i;
-	
+	int	i;
+
 	i = 0;
 	while (envp[i])
 	{

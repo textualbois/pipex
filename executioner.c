@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 06:04:46 by isemin            #+#    #+#             */
-/*   Updated: 2024/01/30 19:42:56 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/26 20:13:34 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	try_execution(char *cmd, char **env_paths, char **envp)
 {
-	char **args;
-	char *full_path;
+	char	**args;
+	char	*full_path;
 
 	args = parse_args(cmd);
 	full_path = get_full_path(args[0], env_paths);
@@ -33,8 +33,8 @@ static void	try_execution(char *cmd, char **env_paths, char **envp)
 
 static int	parent_await(int last_pid, int fd_array[3][2])
 {
-	int status;
-	int pid;
+	int	status;
+	int	pid;
 
 	pid = waitpid(last_pid, &status, 0);
 	close_all(fd_array);

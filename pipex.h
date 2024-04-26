@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:24:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/02/01 17:18:53 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/26 20:17:02 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,30 +44,34 @@ char	*get_full_path(char *cmd, char **env_paths);
 // utils.c
 void	*clear_arr(char **res_arr);
 size_t	ft_arrlen(char **arr);
-char	**ft_map_s2a(char **arr, char *str, char *(*f)(const char*, const char*));
-void	remove_chars(char  *str, char *c);
+char	**ft_map_s2a(char **arr, char *str, \
+					char *(*f)(const char*, const char*));
+void	remove_chars(char *str, char *c);
 
 //command_parser.c
 char	**parse_args(char *cmd);
 
 //error.c
 void	perror_exit(int exit_code, char *error_message);
-int     perror_return(int return_value, char *error_message);
+int		perror_return(int return_value, char *error_message);
 void	werror_exit(int exit_code, char *error_message, int fd);
-int     werror_return(int return_value, char *error_message, int fd);
+int		werror_return(int return_value, char *error_message, int fd);
 
 // executioner.c
-int	execute_args(int argc, char **argv, char **path, char **envp);
-int	execute_args_h_doc(int argc, char **argv, char **path, char **envp);
+int		execute_args(int argc, char **argv, char **path, char **envp);
+int		execute_args_h_doc(int argc, char **argv, char **path, char **envp);
 
 // manage_fd.c
-int     set_fds(int fd_array[3][2], int cmd_number, int cmd_number_limit, char **argv);
-int     set_fds_h_doc(int fd_array[3][2], int cmd_number, int cmd_number_limit, char **argv);
-void	close_fds_parent(int fd_array[3][2], int cmd_number, int cmd_number_limit);
+int		set_fds(int fd_array[3][2], int cmd_number, \
+				int cmd_number_limit, char **argv);
+int		set_fds_h_doc(int fd_array[3][2], int cmd_number, \
+						int cmd_number_limit, char **argv);
+void	close_fds_parent(int fd_array[3][2], int cmd_number, \
+						int cmd_number_limit);
 void	close_all(int fd_array[3][2]);
 
 // here_doc.c
-int	here_doc(int argc, char **argv, char **env_paths, char **envp);
+int		here_doc(int argc, char **argv, char **env_paths, char **envp);
 
 // get_next_line.c
 char	*get_next_line(int fd, int clear_stash);

@@ -25,7 +25,6 @@ bonus: fclean $(B_OBJS)
 	make all bonus -C ./libft/
 	$(CC) $(CFLAGS) $(B_OBJS) libft/libft.a -o ${NAME}
 
-
 clean:
 	make clean -C ./libft/
 	rm -f $(OBJS) $(B_OBJS)
