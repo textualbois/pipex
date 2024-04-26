@@ -1,7 +1,15 @@
+# macOS system files
+.DS_Store
+
+#vscode whatever
+.vscode
+.vscode*
+
 # Prerequisites
 *.d
 
 # Object files
+obj/*
 *.o
 *.ko
 *.obj
@@ -29,6 +37,8 @@
 *.dylib
 
 # Executables
+a.out
+pipex
 *.exe
 *.out
 *.app
