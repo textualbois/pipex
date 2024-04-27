@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:11:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:19:53 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/27 20:48:16 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_map_s2a(char **arr, char *str, char *(*f)(const char*, const char*))
 	char	**res;
 	int		arr_i;
 
-	res = malloc((ft_arrlen(arr) + 1) * sizeof(char**));
+	res = malloc((ft_arrlen(arr) + 1) * sizeof(char **));
 	arr_i = 0;
 	while (arr[arr_i] != NULL)
 	{
