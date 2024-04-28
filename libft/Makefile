@@ -26,7 +26,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 $%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -g -c $< -o $@
 
 bonus: $(BONUS_OBJS)
 	ar rcs $(NAME) $(BONUS_OBJS)
