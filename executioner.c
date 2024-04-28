@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 06:04:46 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:13:34 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/27 22:55:41 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ static void	try_execution(char *cmd, char **env_paths, char **envp)
 	full_path = get_full_path(args[0], env_paths);
 	if (full_path != NULL)
 	{
+		if (access(full_path, X_OK) == -1)
+			werror_exit(127, ft_strjoin("permission denied: ", cmd), 2);
 		if (execve(full_path, args, envp) == -1)
 		{
 			free(full_path);

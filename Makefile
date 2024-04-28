@@ -1,8 +1,8 @@
 NAME = pipex
 
-SRCS = pipex.c executioner.c utils.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c
+SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c debug.c
 
-B_SRCS = pipex.c executioner.c utils.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c
+B_SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c debug.c
 
 OBJS = $(SRCS:.c=.o)
 

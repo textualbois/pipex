@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:24:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:17:02 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/27 21:05:07 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ char	**ft_map_s2a(char **arr, char *str, \
 					char *(*f)(const char*, const char*));
 void	remove_chars(char *str, char *c);
 
+//utils2.c
+int		ft_str_end_wit(const char *s1, const char *s2);
+
 //command_parser.c
 char	**parse_args(char *cmd);
 
@@ -75,4 +78,8 @@ int		here_doc(int argc, char **argv, char **env_paths, char **envp);
 
 // get_next_line.c
 char	*get_next_line(int fd, int clear_stash);
+
+//debug.c
+void	debug(const char *msg, char *file_name);
+
 #endif
