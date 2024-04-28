@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:23:19 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 22:47:51 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:11:00 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char	*get_full_path(char *cmd, char **env_paths)
 	werror_exit(127, ft_strjoin(cmd, ": command not found"), 2);
 	return (NULL);
 }
-
 
 char	**get_path(char **envp)
 {

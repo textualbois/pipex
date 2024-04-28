@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 00:22:35 by isemin            #+#    #+#             */
-/*   Updated: 2024/02/01 16:51:42 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:13:59 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ int	set_fds_h_doc(int fd_array[3][2], int cmd_num, int cmd_num_lim, char **argv)
 
 void	close_fds_parent(int fd_array[3][2], int cmd_num, int cmd_num_lim)
 {
-	//close(STDOUT_FILENO);
 	if (cmd_num + 1 < cmd_num_lim)
 		close(fd_array[(cmd_num % 2) + 1][WRITE_END]);
 	else
@@ -83,7 +82,7 @@ void	close_fds_parent(int fd_array[3][2], int cmd_num, int cmd_num_lim)
 
 void	close_all(int fd_array[3][2])
 {
-	int i;
+	int	i;
 
 	i = 2;
 	while (i >= 0)

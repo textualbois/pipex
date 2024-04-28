@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:11:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 20:48:16 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:10:14 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ void	*clear_arr(char **res_arr)
 	return (NULL);
 }
 
-char	**ft_map_s2a(char **arr, char *str, char *(*f)(const char*, const char*))
+char	**ft_map_s2a(char **arr, char *str, \
+						char *(*f)(const char*, const char*))
 {
 	char	**res;
 	int		arr_i;
@@ -81,4 +82,3 @@ void	remove_chars(char *str, char *c)
 		}
 	}
 }
-

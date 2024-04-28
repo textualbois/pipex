@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:14:14 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 20:54:34 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:11:12 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	**shift_argv(int argc, char **argv, char *new_infile)
 	return (new_argv);
 }
 
-static char	*create_here_doc()
+static char	*create_here_doc(void)
 {
 	char	*here_doc_file;
 	char	*base_file_name;

@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:12:09 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:12:56 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:13:13 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	perror_return(int return_value, char *error_message)
 		perror(error_message);
 	return (return_value);
 }
-
 
 void	werror_exit(int exit_code, char *error_message, int fd)
 {

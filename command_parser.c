@@ -6,16 +6,11 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:11:54 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 21:49:34 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:07:18 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
-
-// static char	**parse_local_command(char *cmd)
-// {
-
-// }
 
 static char	**parse_awk_sed(char *cmd)
 {
@@ -42,7 +37,6 @@ static char	**parse_awk_sed(char *cmd)
 
 char	**parse_args(char *cmd)
 {
-
 	if (ft_str_end_wit(cmd, ".sh"))
 	{
 		remove_chars(cmd, "\\");
@@ -53,20 +47,5 @@ char	**parse_args(char *cmd)
 		remove_chars(cmd, "\\");
 		return (ft_split(cmd, ' '));
 	}
-	// else if (ft_strncmp(cmd, "./", 2) == 0)
-	// 	return (parse_local_command(cmd));
-	else
-		return (parse_awk_sed(cmd));
+	return (parse_awk_sed(cmd));
 }
-
-
-
-
-
-
-	// debug("current command", "debug.log");
-	// debug(cmd, "debug.log");
-	// debug("\n", "debug.log");
-	// write(2,"Command: <", ft_strlen("Command: <"));
-	// write(2, cmd, ft_strlen(cmd));
-	// write(2, ">\n", 2);
