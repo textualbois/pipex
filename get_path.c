@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 17:23:19 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:13:56 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/29 00:26:21 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*get_full_path(char *cmd, char **env_paths)
 		}
 		clear_arr(env_paths);
 	}
-	if (cmd != NULL && access(cmd, X_OK) != -1)
+	if (ft_strchr(cmd, '/') != NULL && access(cmd, F_OK) != -1)
 		return (cmd);
 	werror_exit(127, ft_strjoin(cmd, ": command not found"), 2);
 	return (NULL);
