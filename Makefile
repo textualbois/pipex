@@ -1,25 +1,32 @@
 NAME = pipex
 
-SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c debug.c
+SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c
 
-B_SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c debug.c
+B_SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c
 
-OBJS = $(SRCS:.c=.o)
+OBJ_DIR = ./obj/
 
-B_OBJS = $(B_SRCS:.c=.o)
+OBJS = $(addprefix $(OBJ_DIR), $(SRCS:.c=.o))
+
+B_OBJS = $(addprefix $(OBJ_DIR), $(B_SRCS:.c=.o))
 
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
+	@echo "all DONE"
 
-$(NAME): $(OBJS)
+$(NAME): ${OBJ_DIR} $(OBJS)
 	make all bonus -C ./libft/
 	$(CC) $(CFLAGS) $(OBJS) libft/libft.a -o ${NAME}
 
-%.o: %.c
+$(OBJ_DIR)%.o: %.c | obj
 	$(CC) $(CFLAGS) -g -c $< -o $@
+
+$(OBJ_DIR):
+	@mkdir -p $(OBJ_DIR)
+	@echo "OBJ_DIR DONE"
 
 bonus: fclean $(B_OBJS)
 	make all bonus -C ./libft/
