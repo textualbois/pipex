@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 06:04:46 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 22:55:41 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 19:13:52 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,10 +65,8 @@ int	execute_args(int argc, char **argv, char **env_paths, char **envp)
 			else if (pid == CHILD)
 			{
 				close(fd[((arg_i - 1) % 2) + 1][READ_END]);
-				//close(STDIN_FILENO);
 				try_execution(argv[arg_i], env_paths, envp);
 			}
-			//close_fds_parent(fd, arg_i - 1, argc - 2);
 		}
 		close_fds_parent(fd, arg_i - 1, argc - 2);
 		arg_i++;
@@ -93,10 +91,8 @@ int	execute_args_h_doc(int argc, char **argv, char **env_paths, char **envp)
 			else if (pid == CHILD)
 			{
 				close(fd[((arg_i - 1) % 2) + 1][READ_END]);
-				//close(STDIN_FILENO);
 				try_execution(argv[arg_i], env_paths, envp);
 			}
-			//close_fds_parent(fd, arg_i - 1, argc - 2);
 		}
 		close_fds_parent(fd, arg_i - 1, argc - 2);
 		arg_i++;
