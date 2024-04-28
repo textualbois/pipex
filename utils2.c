@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:11:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 21:04:55 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/29 00:20:25 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,4 @@ int	ft_str_end_wit(const char *s1, const char *s2)
 		return (1);
 	else
 		return (0);
-
 }

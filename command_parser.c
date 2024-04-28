@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:11:54 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:13:03 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/29 00:19:54 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,25 @@ static char	**parse_awk_sed(char *cmd)
 	// args[1] = this thing;
 }
 
+// char	**parse_args(char *cmd)
+// {
+// 	if (ft_strncmp(cmd, "awk ", 4) && ft_strncmp(cmd, "sed ", 4))
+// 		return (ft_split(cmd, ' '));
+// 	else
+// 		return (parse_awk_sed(cmd));
+// }
+
 char	**parse_args(char *cmd)
 {
-	// write(2,"Command: ", ft_strlen("Command: "));
-	// write(2, cmd, ft_strlen(cmd));
-	// write(2, "\n", 1);
-	if (ft_strncmp(cmd, "awk ", 4) && ft_strncmp(cmd, "sed ", 4))
+	if (ft_str_end_wit(cmd, ".sh"))
+	{
+		remove_chars(cmd, "\\");
+		return (ft_split(cmd, '\0'));
+	}
+	else if (ft_strncmp(cmd, "awk ", 4) && ft_strncmp(cmd, "sed ", 4))
+	{
+		remove_chars(cmd, "\\");
 		return (ft_split(cmd, ' '));
-	// else if (ft_strncmp(cmd, "./", 2) == 0)
-	// 	return (parse_local_command(cmd));
-	else
-		return (parse_awk_sed(cmd));
+	}
+	return (parse_awk_sed(cmd));
 }

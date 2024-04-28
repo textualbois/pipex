@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:24:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/26 20:17:02 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/29 00:21:18 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,13 @@ char	**ft_map_s2a(char **arr, char *str, \
 					char *(*f)(const char*, const char*));
 void	remove_chars(char *str, char *c);
 
-//command_parser.c
+// utils2.c
+int		ft_str_end_wit(const char *s1, const char *s2);
+
+// command_parser.c
 char	**parse_args(char *cmd);
 
-//error.c
+// error.c
 void	perror_exit(int exit_code, char *error_message);
 int		perror_return(int return_value, char *error_message);
 void	werror_exit(int exit_code, char *error_message, int fd);
