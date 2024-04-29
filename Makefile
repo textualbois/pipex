@@ -1,8 +1,12 @@
 NAME = pipex
 
-SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c
+SRCS = pipex.c executioner.c utils.c utils2.c \
+		get_path.c manage_fd.c manage_fd_helpers.c \
+		here_doc.c gnl.c error.c command_parser.c
 
-B_SRCS = pipex.c executioner.c utils.c utils2.c get_path.c manage_fd.c here_doc.c gnl.c error.c command_parser.c
+B_SRCS = pipex.c executioner.c utils.c utils2.c \
+		get_path.c manage_fd.c manage_fd_helpers.c \
+		here_doc.c gnl.c error.c command_parser.c
 
 OBJ_DIR = ./obj/
 

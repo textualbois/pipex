@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 00:24:50 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/27 21:05:07 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/28 23:39:28 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,14 @@ int		set_fds_h_doc(int fd_array[3][2], int cmd_number, \
 void	close_fds_parent(int fd_array[3][2], int cmd_number, \
 						int cmd_number_limit);
 void	close_all(int fd_array[3][2]);
+
+// manage_fd_helpers.c
+int		setup_initial_read_fd(int fd_array[][2], char **argv);
+int		redirect_input(int fd_array[][2], int cmd_num);
+int		redirect_out(int fd_array[][2], int cmd_num, \
+					int cmd_num_lim, char **argv);
+int		redirect_out_h_doc(int fd_array[][2], int cmd_num, \
+						int cmd_num_lim, char **argv);
 
 // here_doc.c
 int		here_doc(int argc, char **argv, char **env_paths, char **envp);
