@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 04:04:00 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/28 19:03:52 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/29 03:18:44 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	main(int argc, char **argv, char **envp)
 		path = get_path(envp);
 		res_code = execute_args(argc, argv, path, envp);
 	}
-	clear_arr(path);
+	if (path != NULL)
+		clear_arr(path);
 	return (res_code);
 }

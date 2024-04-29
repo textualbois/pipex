@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 00:22:35 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/28 19:13:59 by isemin           ###   ########.fr       */
+/*   Updated: 2024/04/29 03:21:31 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,27 +18,16 @@ int	set_fds(int fd_array[3][2], int cmd_num, int cmd_num_lim, char **argv)
 		return (perror_return(-1, "pipe error"));
 	if (cmd_num == 1)
 	{
-		fd_array[0][READ_END] = open(argv[1], O_RDONLY);
-		if (fd_array[0][READ_END] == -1)
-			return (perror_return(-1, argv[1]));
-		if (dup2(fd_array[0][READ_END], STDIN_FILENO) == -1)
-			return (perror_return(-1, argv[1]));
-	}
-	else if (dup2(fd_array[2 - (cmd_num % 2)][READ_END], STDIN_FILENO) == -1)
-		return (perror_return(-1, "dup2"));
-	if (cmd_num + 1 < cmd_num_lim)
-	{
-		if (dup2(fd_array[(cmd_num % 2) + 1][WRITE_END], STDOUT_FILENO) == -1)
-			return (perror_return(-1, "dup2"));
+		if (setup_initial_read_fd(fd_array, argv) != 0)
+			return (-1);
 	}
 	else
 	{
-		fd_array[0][WRITE_END] = open(argv[cmd_num_lim + 1], O_WRONLY | O_TRUNC | O_CREAT, 0644);
-		if (fd_array[0][WRITE_END] == -1)
-			return (perror_return(-1, argv[cmd_num_lim + 1]));
-		 else if (dup2(fd_array[0][WRITE_END], STDOUT_FILENO) == -1)
-		 	return (perror_return(-1, argv[cmd_num_lim + 1]));
+		if (redirect_input(fd_array, cmd_num) != 0)
+			return (-1);
 	}
+	if (redirect_out(fd_array, cmd_num, cmd_num_lim, argv) != 0)
+		return (-1);
 	return (1);
 }
 
@@ -48,27 +37,16 @@ int	set_fds_h_doc(int fd_array[3][2], int cmd_num, int cmd_num_lim, char **argv)
 		return (perror_return(-1, "pipe error"));
 	if (cmd_num == 1)
 	{
-		fd_array[0][READ_END] = open(argv[1], O_RDONLY);
-		if (fd_array[0][READ_END] == -1)
-			return (perror_return(-1, argv[1]));
-		if (dup2(fd_array[0][READ_END], STDIN_FILENO) == -1)
-			return (perror_return(-1, argv[1]));
-	}
-	else if (dup2(fd_array[2 - (cmd_num % 2)][READ_END], STDIN_FILENO) == -1)
-		return (perror_return(-1, "dup2"));
-	if (cmd_num + 1 < cmd_num_lim)
-	{
-		if (dup2(fd_array[(cmd_num % 2) + 1][WRITE_END], STDOUT_FILENO) == -1)
-			return (perror_return(-1, "dup2"));
+		if (setup_initial_read_fd(fd_array, argv) != 0)
+			return (-1);
 	}
 	else
 	{
-		fd_array[0][WRITE_END] = open(argv[cmd_num_lim + 1], O_WRONLY | O_CREAT, 0644);
-		if (fd_array[0][WRITE_END] == -1)
-			return (perror_return(-1, argv[cmd_num_lim + 1]));
-		 else if (dup2(fd_array[0][WRITE_END], STDOUT_FILENO) == -1)
-		 	return (perror_return(-1, argv[cmd_num_lim + 1]));
+		if (redirect_input(fd_array, cmd_num) != 0)
+			return (-1);
 	}
+	if (redirect_out_h_doc(fd_array, cmd_num, cmd_num_lim, argv) != 0)
+		return (-1);
 	return (1);
 }
 
