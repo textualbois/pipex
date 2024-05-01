@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 23:14:37 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/29 02:45:32 by isemin           ###   ########.fr       */
+/*   Updated: 2024/05/01 15:25:51 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	redirect_out_h_doc(int fd_array[][2], int cmd_num, \
 	else
 	{
 		fd_array[0][WRITE_END] = open(argv[cmd_num_lim + 1], \
-									O_WRONLY | O_CREAT, 0644);
+									O_WRONLY | O_APPEND | O_CREAT, 0644);
 		if (fd_array[0][WRITE_END] == -1)
 			return (perror_return(-1, argv[cmd_num_lim + 1]));
 		if (dup2(fd_array[0][WRITE_END], STDOUT_FILENO) == -1)
