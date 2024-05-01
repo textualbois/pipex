@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 04:04:00 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/29 03:18:44 by isemin           ###   ########.fr       */
+/*   Updated: 2024/05/01 15:29:13 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int	main(int argc, char **argv, char **envp)
 	int		res_code;
 
 	if (argc < 5)
-		return (perror_return(EXIT_FAILURE, "too few args"));
+		return (werror_return(EXIT_FAILURE, "too few args", 2));
 	if (ft_strlen(argv[1]) == 8 && ft_strncmp(argv[1], "here_doc", 8) == 0)
 	{
 		if (argc < 6)
-			return (perror_return(EXIT_FAILURE, "too few args"));
+			return (werror_return(EXIT_FAILURE, "too few args", 2));
 		else
 		{
 			path = get_path(envp);
