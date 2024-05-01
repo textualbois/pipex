@@ -6,7 +6,7 @@
 /*   By: isemin <isemin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:14:14 by isemin            #+#    #+#             */
-/*   Updated: 2024/04/28 19:11:12 by isemin           ###   ########.fr       */
+/*   Updated: 2024/05/01 21:46:12 by isemin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,21 @@ static char	*create_here_doc(void)
 {
 	char	*here_doc_file;
 	char	*base_file_name;
-	int		name_extension;
+	int		extension_code;
+	char	extension;
 
-	name_extension = 0;
+	extension_code = 0;
+	extension = ft_itoa(extension_code);
 	base_file_name = ".here_doc_temp_";
-	here_doc_file = ft_strjoin(base_file_name, ft_itoa(name_extension));
+	here_doc_file = ft_strjoin(base_file_name, ft_itoa(extension_code));
+	free(extension);
 	while (access(here_doc_file, F_OK) == 0)
 	{
 		free(here_doc_file);
-		name_extension++;
-		here_doc_file = ft_strjoin(base_file_name, ft_itoa(name_extension));
+		extension_code++;
+		extension = ft_itoa(extension_code);
+		here_doc_file = ft_strjoin(base_file_name, extension);
+		free(extension);
 	}
 	return (here_doc_file);
 }
@@ -97,9 +102,9 @@ int	here_doc(int argc, char **argv, char **env_paths, char **envp)
 		status = execute_args_h_doc(argc - 1, new_argv, env_paths, envp);
 	unlink(here_doc_file);
 	free(here_doc_file);
-	here_doc_file = NULL;
+	free(new_argv);
 	if (new_argv == NULL)
 		return (EXIT_FAILURE);
-	new_argv[1] = NULL;
+	free(new_argv);
 	return (status);
 }
