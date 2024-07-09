@@ -46,7 +46,7 @@ static char	*create_here_doc(void)
 	extension_code = 0;
 	extension = ft_itoa(extension_code);
 	base_file_name = ".here_doc_temp_";
-	here_doc_file = ft_strjoin(base_file_name, ft_itoa(extension_code));
+	here_doc_file = ft_strjoin(base_file_name, extension);
 	free(extension);
 	while (access(here_doc_file, F_OK) == 0)
 	{
